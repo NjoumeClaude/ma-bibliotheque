@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  Servlet:
+    context-path: /api/v1/
+
+spring:
+  application:
+    name: ma-bibliotheque
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/bibliotheque
+    password: root
+    username: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    format-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+#Configure Swagger
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+    path: /

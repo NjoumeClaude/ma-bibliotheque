@@ -1,0 +1,31 @@
+services:
+  dpostgres:
+    image: postgres
+    container_name: postgres-db
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: bibliotheque
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: adminer-db
+    restart: always
+    ports:
+      - "8081:8080"
+
+  api:
+    build: .
+    container_name: gestion-bibliotheque
+    ports:
+      - "3307:8080"
+
+volumes:
+  pgdata:
+
+
