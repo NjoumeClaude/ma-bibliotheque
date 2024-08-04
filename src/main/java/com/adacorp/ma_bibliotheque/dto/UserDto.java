@@ -38,6 +38,7 @@ public class UserDto {
 
 
         return Utilisateurs.builder()
+                .identifiant(dto.getIdentifiant())
                 .nom(dto.getNom())
                 .prenom(dto.getPrenom())
                 .email(dto.getEmail())
@@ -52,6 +53,7 @@ public class UserDto {
 
 
         return UserDto.builder()
+                .identifiant(utilisateurs.getIdentifiant())
                 .nom(utilisateurs.getNom())
                 .prenom(utilisateurs.getPrenom())
                 .email(utilisateurs.getEmail())
