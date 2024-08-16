@@ -21,7 +21,7 @@ import java.time.LocalDate;
 public class Abonnements {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int numAbonnement;
 
     private LocalDate dateAbonnement;
