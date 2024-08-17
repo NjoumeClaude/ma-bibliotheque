@@ -1,6 +1,7 @@
 package com.adacorp.ma_bibliotheque.services.impl;
 
 import com.adacorp.ma_bibliotheque.dto.UserDto;
+import com.adacorp.ma_bibliotheque.models.Abonnements;
 import com.adacorp.ma_bibliotheque.models.Utilisateurs;
 import com.adacorp.ma_bibliotheque.repositories.UserRepository;
 import com.adacorp.ma_bibliotheque.services.UserService;

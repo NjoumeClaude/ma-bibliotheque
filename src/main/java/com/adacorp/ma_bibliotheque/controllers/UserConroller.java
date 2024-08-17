@@ -12,12 +12,12 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("utilisateur")
+@RequestMapping("api/v1/utilisateur/")
 public class UserConroller {
 
     private final UserService userService;
 
-    @PostMapping
+    @PostMapping("create-user")
     public UserDto newUser (@RequestBody UserDto dto) {
 
         return userService.creerUtilisateur(dto);
